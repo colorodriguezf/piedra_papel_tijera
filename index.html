@@ -17,7 +17,16 @@
         <span id="user-score"></span> :  <span id="computer-score"></span>
     </div>
     <div class="resultado">
-        <p>Esperando para jugar <span class="esperandoParaJugar">...</span></p>
+        <p id="resultado">Esperando para jugar <span class="esperandoParaJugar">...</span></p>
+    </div>
+    <div class="vs-none" id="vs-contenedor">
+        <div class="opcion-vs" id="opcion-user">
+            <img src="" alt="" id="vs-user" height="150">
+        </div>
+        <div id="vs-p"></div>
+        <div class="opcion-vs" id="opcion-pc">
+            <img src="" alt="" id="vs-pc" height="150">
+        </div>
     </div>
     <div class="opciones">
         <div id="piedra" class="opcion">
@@ -31,5 +40,7 @@
         </div>
         <p id="mensaje">Elige una opcion</p>
     </div>
+
+    <script src="game.js"></script>
 </body>
 </html>

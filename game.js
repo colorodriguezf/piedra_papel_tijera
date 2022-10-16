@@ -18,6 +18,8 @@ document.getElementById('tijera').addEventListener('click', () => jugar('tijera'
 
 const win = new Audio();
 win.src= "sound-effects/correcto.mp3";
+const tie = new Audio();
+tie.src = "sound-effects/empate.mp3";
 const lose = new Audio();
 lose.src= "sound-effects/perdedor.mp3";
 
@@ -103,6 +105,7 @@ function empate(user, computer){
     let estadoRonda = document.getElementById(user);
     estadoRonda.classList.add('estiloEmpate');
     setTimeout(() => estadoRonda.classList.remove('estiloEmpate'), 500);
+    tie.play();   
 
     opcion_vs_pc.classList.add('estiloEmpate');
     opcion_vs_user.classList.add('estiloEmpate');

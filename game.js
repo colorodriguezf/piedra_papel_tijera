@@ -33,7 +33,7 @@ function jugar(eleccionUsuario) {
     switch (eleccionUsuario + eleccionComp) {
         case 'papelpiedra':
         case 'piedratijera':
-        case 'tijeraspapel':
+        case 'tijerapapel':
             ganador(eleccionUsuario, eleccionComp);
         break;
 

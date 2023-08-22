@@ -15,6 +15,7 @@ let opcion_vs_pc = document.getElementById('opcion-pc');
 document.getElementById('piedra').addEventListener('click', () => jugar('piedra'));
 document.getElementById('papel').addEventListener('click', () => jugar('papel'));
 document.getElementById('tijera').addEventListener('click', () => jugar('tijera'));
+let imgVs = document.querySelectorAll('.opcion-vs img');
 
 const win = new Audio();
 win.src= "sound-effects/correcto.mp3";
@@ -30,6 +31,10 @@ function jugar(eleccionUsuario) {
     document.getElementById('vs-user').src= 'img/'+eleccionUsuario+'.png';
     document.getElementById('vs-p').innerHTML="VS";
     document.getElementById('vs-pc').src= 'img/'+eleccionComp+'.png';
+    for(let i=0; i<imgVs.length; i++) {
+        imgVs[i].classList.add('show');
+    }
+
     switch (eleccionUsuario + eleccionComp) {
         case 'papelpiedra':
         case 'piedratijera':
@@ -75,6 +80,11 @@ function ganador(user, computer) {
     opcion_vs_user.classList.add('estiloGanador','zoom');
     setTimeout(() => opcion_vs_pc.classList.remove('estiloPerdedor'), 1000);
     setTimeout(() => opcion_vs_user.classList.remove('estiloGanador','zoom'), 1000);
+    setTimeout(() => {
+        for (let i = 0; i < imgVs.length; i++) {
+          imgVs[i].classList.remove('show');
+        }
+      }, 1200);
 }
 
 function perdedor(user, computer) {
@@ -95,6 +105,11 @@ function perdedor(user, computer) {
     opcion_vs_pc.classList.add('estiloGanador');
     setTimeout(() => opcion_vs_user.classList.remove('estiloPerdedor','zoom'), 1000);
     setTimeout(() => opcion_vs_pc.classList.remove('estiloGanador'), 1000);
+    setTimeout(() => {
+        for (let i = 0; i < imgVs.length; i++) {
+          imgVs[i].classList.remove('show');
+        }
+      }, 1200);
 }
 
 function empate(user, computer){
@@ -111,6 +126,11 @@ function empate(user, computer){
     opcion_vs_user.classList.add('estiloEmpate');
     setTimeout(() => opcion_vs_pc.classList.remove('estiloEmpate'), 1000);
     setTimeout(() => opcion_vs_user.classList.remove('estiloEmpate'), 1000);
+    setTimeout(() => {
+        for (let i = 0; i < imgVs.length; i++) {
+          imgVs[i].classList.remove('show');
+        }
+      }, 1200);
 }
 
    

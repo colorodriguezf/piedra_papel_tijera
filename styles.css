@@ -145,18 +145,7 @@ header h1 {
     box-shadow: #222;
 }
 
-@media only screen and (min-width: 490px) {
-    * {
-        margin:0;
-        padding:0;
-    }
-    
-    body{
-        background-color: #24272e;
-        color: #fff;
-        font-family:"Roboto", sans-serif;
-    }
-    
+@media only screen and (min-width: 490px) {    
     header {
         background-color: #fff;
         padding: 20px;
@@ -170,82 +159,48 @@ header h1 {
     }
     
     .puntuacion {
-        border: 3px solid #fff;
         width: 300px;
         margin:40px auto;
         font-size: 40px;
         border-radius:4px;
-        text-align: center;
         padding: 15px 20px;
-        position: relative;
     }
     
     .badge {
-        background-color: #e2584d;
-        text-transform: uppercase;
         font-size: 14px;
         padding: 10px 6px;
         border-radius: 3px;
     }
-    
-    #user-label {
-        position: absolute;
-        top:50%;
-        left:-5px;
-        transform: translate(-10%, -50%);
-    }
+
     #computer-label {
         position: absolute;
         top:50%;
         right:-5px;
         transform: translate(10%, -50%);
-    }
-    
+    }    
     .resultado {
-        font-weight:300;
-        text-align: center;
         font-size:30px;
-        line-height:50px;
-    }
-    .vs-none {
-        display: none;
     }
     .vs {
-        display: flex;
-        justify-content:center;
         margin:40px 0px 10px 0px;
         gap:20px;
-    }
-    .vs-p {
-        text-align: center;
     }
     .zoom {
         transform:scale(1.1);
     }
     .opcion-vs {
-        display: inline-block;
-        border: solid 3px #fff;
         border-radius:5%;
         padding:10px;
         transition: all 0.3s ease;
         color: white;
         width: 150px;
     }
-    .opcion-vs img {
-        width: 100%;
-        height: 100%;
-        filter: invert(100%);
-    }
     
     .opciones {
         margin:0 auto;
-        text-align: center;
         padding:40px 0;
     }
     .opcion {
-        display: inline-block;
-        border: solid 3px #fff;
-        border-radius:50%;
         padding:10px;
         margin:auto 10px;
         transition: all 0.3s ease;
@@ -253,30 +208,9 @@ header h1 {
     .opcion img {
         filter: invert(100%);
     }
-    .opcion:hover {
-        transform:scale(1.1);
-    }
     #mensaje {
-        text-align: center;
-        font-weight: 500;
-        text-transform: uppercase;
         letter-spacing:2px;
         margin: 40px 0;
     }
     
-    .estiloGanador {
-        border:3px solid #4dcc7d;
-        background-color: #043507;
-        box-shadow: 0 0 20px #043507;
-    }
-    .estiloPerdedor {
-        border:3px solid #c52e2e;
-        background-color: #2e0303;
-        box-shadow: 0 0 20px #2e0303;
-    }
-    .estiloEmpate {
-        border: 3px solid #444;
-        background-color: #222;
-        box-shadow: #222;
-    }
 }
